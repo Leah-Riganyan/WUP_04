@@ -70,11 +70,11 @@ The data shows that there is a difference somewhere in these categories.
 ##TukeyHSD Test
 
 ```{r}
-plot(TukeyHSD(model1))
+a <- TukeyHSD(model1, conf.level=.95)
 par(mar = c(3, 15.7, 2, 2))
-plot(TukeyHSD(model1),las=2)
+plot(a,las=2)
 ```
-The TukeyHSD test shows that LT High School and Graduate categories are statistically different, as well as LT High School and Junior College at 95% level.
+The TukeyHSD test shows that LT High School and Graduate categories are statistically different, as well as LT High School and Junior College at the 95% level.
    
    
 # Discussion and Conclusion
