@@ -11,7 +11,7 @@ output:
 require(knitr)
 require(tidyverse)
 require(tigerstats)
-
+mydata <- read.csv(file = "GSScsv.csv")
 ```
 
 # Introduction
@@ -36,6 +36,14 @@ $H_a$ There is a significant difference in average score on the WORDSUM test bet
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
+```{r}
+basicCN <- ggplot(mydata,aes(x=DEGREE,y=WORDSUM))
+
+basicCN + geom_boxplot()
+```
+   
+By looking at the boxplot, we can infer that the high school categories are beneath the college categories. LT High School's box is at the same level as High School. Interestingly, the top of the LT High School box would clip a bit into the Bachelor's. There is a clear statistical difference between LT High School with Junior College, and Graduate. LT High School is beneath the two.The top of High School's nearly touches Junior College's bottom line. High School's box collides greatly with Bachelor's, while being far beneath Graduate's. 
+   
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
