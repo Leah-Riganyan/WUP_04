@@ -74,9 +74,12 @@ a <- TukeyHSD(model1, conf.level=.95)
 par(mar = c(3, 15.7, 2, 2))
 plot(a,las=2)
 ```
+    
 The TukeyHSD test shows that LT High School and Graduate categories are statistically different, as well as LT High School and Junior College at the 95% level.
    
    
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+   
+We determined that the information we're trying to assess is categorical. We began with a boxplot, and saw a big distinction between the High School levels compared to the Graduate up levels. We then saw the numerical data which confirmed again that there was a degree of change between them all. The inferential results, however, showed that there was some difference possible. Using a TukeyHSD test, we finally see that LT Highschool and Junior College are statistically different at the 95% level.
